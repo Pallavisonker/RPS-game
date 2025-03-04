@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: 100%;  
+        }
+        .container{
+            background-color:cornflowerblue;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            background-color:skyblue;
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid white;
+            text-align: center;
+        }
+        h2{
+            font-size: 200%;
+            color:black;
+        }
+        button{
+            background-color:skyblue;
+            border-radius: 20px;
+            width: 200px;
+            height: 50px;
+            border: 2px solid skyblue;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>RPS Game</h2>
+        <div class="box">
+            <button onclick="rock()">
+                <img src="image/photo_6138503706715474040_x.jpg">
+            </button>
+            <button onclick="paper()">
+                <img src="image/photo_6138503706715474041_x.jpg">
+            </button>
+            <button onclick="scissor()">
+                <img src="image/photo_6138503706715474042_x.jpg">
+            </button>
+        </div>
+    </div>
+    <script>
+        function rock(){
+            let r=0;
+            let value=Math.floor(Math.random()*3);
+            if(value==r){
+                alert("Tie");
+                // console.log("");
+            }else if(value==1){
+                alert("Computer Won");
+            }else {
+                alert("You Won");
+            }
+        }
+        function paper(){
+            let p=1;
+            let value=Math.floor(Math.random()*3);
+            if(value==p){
+                alert("Tie");
+                console.log("")
+            }else if(value==2){
+                alert("Computer Won");
+            }else {
+                alert("You Won");
+            }
+        }
+        function scissor(){
+            let s=2;
+            let value=Math.floor(Math.random()*3);
+            if(value==s){
+                alert("Tie");
+            }else if(value==0){
+                alert("Computer Won");
+            }else {
+                alert("You Won");
+            }
+        }
+    </script>
+</body>
+</html>
